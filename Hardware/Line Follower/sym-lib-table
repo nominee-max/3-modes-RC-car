@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "HC-S04 Ultrasonic") (type "KiCad") (uri "/Users/uyadav/Desktop/projects/3-modes-RC-car/Hardware/Obstacle_Avoider") (options "") (descr ""))
+)
