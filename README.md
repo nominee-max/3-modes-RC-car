@@ -2,15 +2,16 @@
 
 An Arduino-based RC car platform with multiple interchangeable driving modes:
 
-1. **Line following** - Uses left and right line sensors to follow a track.
+1. **Line following** - Uses left and right IR sensors to follow a line.
 2. **Obstacle avoidance** - Uses an ultrasonic distance sensor mounted on a servo to detect obstacles and choose a clearer direction.
 3. **Hand-gesture control** - Uses an MPU6050 motion sensor and nRF24L01 radios to send tilt commands to the car wirelessly.
+4. Joy-Stick control - used a joystick on the remote and nRF24L01 radio to control the steering.
 
 The repository includes the firmware for each mode and KiCad design files for the line-follower and hand-gesture-control hardware.
 
 ## Project Description
 
-This project explores several ways to control the same two-wheel drive robot chassis. Each mode is implemented as a separate Arduino sketch so it can be tested and uploaded independently.
+This project explores several ways to control the same two-wheel drive robot chassis. Each mode is implemented as a separate Arduino sketch and hardware so it the sesnors have to be switched and uploaded independently. The future plans for this include have a all the modes mounted on at the same time.
 
 ### Implemented features
 
@@ -41,7 +42,7 @@ Hardware/
 ### Important hardware notes
 
 - The firmware targets Arduino-compatible boards and assumes the pin assignments in each sketch.
-- Motor direction and enable pins differ between the autonomous and hand-gesture sketches. Confirm wiring against the selected sketch before powering the car.
+- Motor direction and enable pins are the same between the autonomous and hand-gesture sketches. 
 - The hand-gesture transmitter and receiver must use the same nRF24L01 address and radio data rate.
 - The transmitter requires an MPU6050, and both radio endpoints require an nRF24L01 module.
 - Use a suitable external motor power supply and common ground. Do not power motors directly from an Arduino GPIO pin.
@@ -60,7 +61,7 @@ Install the Arduino IDE and the libraries required by the mode you want to run:
 You will also need:
 
 - An Arduino-compatible controller board.
-- A two-motor robot chassis and motor driver.
+- A atlest two-motor robot chassis and motor driver.
 - A USB cable for uploading sketches.
 - Mode-specific sensors and modules.
 - A separate, appropriate supply for the motors and a shared ground.
