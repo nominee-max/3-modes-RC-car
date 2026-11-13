@@ -103,8 +103,6 @@ void loop() {
 }
 
 
-
-
 void rotateMotor(int rightMotorSpeed, int leftMotorSpeed) {
   // Control right motor direction
   if (rightMotorSpeed < 0) {

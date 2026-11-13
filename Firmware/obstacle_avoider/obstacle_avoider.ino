@@ -1,12 +1,12 @@
 #include <Servo.h>
 
 // L298N control pins
-const int enablePinA = 5;
-const int LeftMotorForward = 10;
-const int LeftMotorBackward = 11;
-const int RightMotorForward = 9;
-const int RightMotorBackward = 8;
-const int enablePinB = 6;
+#define enabA 5
+#define enabB 6
+#define in1 2
+#define in2 3
+#define in3 4
+#define in4 7
 
 // distance sensor pins
 #define trig_pin A5 // analog input 5
