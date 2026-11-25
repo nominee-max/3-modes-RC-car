@@ -71,11 +71,6 @@ For the radio modes, upload the **transmitter** sketch to the controller's Ardui
 
 ---
 
-## Wiring
-
-refer to the schematics under appropiate sections to get wiring setup
----
-
 ## Hardware files
 
 The `Hardware/` folder has KiCad projects for each mode. Open the `.kicad_pro` file in [KiCad](https://www.kicad.org/) to view the schematic and PCB layout.
